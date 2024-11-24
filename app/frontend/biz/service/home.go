@@ -2,8 +2,8 @@ package service
 
 import (
 	"context"
+	"github.com/HCH1212/gomall/app/frontend/hertz_gen/frontend/common"
 
-	home "github.com/HCH1212/gomall/app/frontend/hertz_gen/frontend/home"
 	"github.com/cloudwego/hertz/pkg/app"
 )
 
@@ -16,7 +16,7 @@ func NewHomeService(Context context.Context, RequestContext *app.RequestContext)
 	return &HomeService{RequestContext: RequestContext, Context: Context}
 }
 
-func (h *HomeService) Run(req *home.Empty) (resp map[string]any, err error) {
+func (h *HomeService) Run(req *common.Empty) (resp map[string]any, err error) {
 	items := []map[string]any{
 		{"Name": "T-short-1", "Price": 100, "Picture": "../static/image/t-shirt-1.jpeg"},
 		{"Name": "T-short-2", "Price": 110, "Picture": "../static/image/t-shirt-2.jpeg"},
